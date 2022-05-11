@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/users', [UserController::class, 'index']);
+Route::get('/delete/{id}', [UserController::class, 'delete']);
+Route::post('/create', [UserController::class, 'create']);
+Route::post('/edit/{id}', [UserController::class, 'update']);
+Route::get('/user/{id}', [UserController::class, 'show']);
